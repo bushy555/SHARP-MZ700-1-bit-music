@@ -1,8 +1,7 @@
-       ==============================
+
 
   ..--== SHARP MZ700  ONE BIT MUSIC ==--..
 
-       ==============================
 
 1-bit music converted from ZX Spectrum to Sharp MZ700.
 
@@ -10,7 +9,8 @@
 A number of Sharp MZ700 emulators refuse to work with 1-bit sound.
 As such, it is yet unknown if these tunes will work correctly on real hardware.
 This emulator works quite successfully:     EmuZ-80B-1500-2200-2500_beta5b.zip
-executable : MZ700-PAL.EXE
+executable :
+		MZ700-PAL.EXE
 
 	     MZ700-NTSC.EXE
 
@@ -134,6 +134,10 @@ dw	$5000								; Execute address
 ds 	104, ' '           						; blank trailer space. 104 total.  32 per line.
 
 
+################
+
+
+
 
 01 47 41 4D 45 0D 0D 0D 0D 0D 0D 0D 0D 0D 0D 0D
 
@@ -152,6 +156,10 @@ ds 	104, ' '           						; blank trailer space. 104 total.  32 per line.
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 
 
+################
+
+
+
 Breakdown of the Hex Example:
 
 01: Type is a machine code binary file.
@@ -167,6 +175,9 @@ Breakdown of the Hex Example:
 00 12: Execution address is $1200.
 
 00 00...: The remaining 104 bytes are zero-padded comments.
+
+
+################
 
 
 
