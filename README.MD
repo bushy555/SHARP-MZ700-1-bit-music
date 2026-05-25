@@ -6,28 +6,26 @@
 1-bit music converted from ZX Spectrum to Sharp MZ700.
 
 
-A number of Sharp MZ700 emulators refuse to work with 1-bit sound.
-As such, it is yet unknown if these tunes will work correctly on real hardware.
-This emulator works quite successfully:     EmuZ-80B-1500-2200-2500_beta5b.zip
+A number of older Sharp MZ700 emulators refuse to work with 1-bit sound.
+I found this particular version " EmuZ-80B-1500-2200-2500_beta5b.zip " from some unknown obscure location, and it works brilliantly on all engines, and runs under Win 7 x32, Win 10 and Win 11.
 executable :
 		MZ700-PAL.EXE
 
 	     MZ700-NTSC.EXE
 
-I think I found it in one of these emulators listed here : https://sharpmz.zdechov.net/?wiki/emulators
-Works fine on Windows 7, 10, 11.
-Not all engines will work.  WTBEEP and Tritone require further analysing to get sound to work.
-Phasers 1-4 yet to be done.
+A number of emus that wont work are listed here : https://sharpmz.zdechov.net/?wiki/emulators
+
+One of the newer emulators is here, which my work (untested).  https://sourceforge.net/projects/mz800emu/
 
 
 
-Emulator usage
+Emulator usage, being "EmuZ-80B" that specifically emulates the MZ700.
 ==================
 
 Load in raw .BIN files
 ----------------------
 
-USE EMULATOR: MZ700\_MZ700emu\mz700-PAL.exe
+USE EMULATOR: mz700-PAL.exe
 
 Control --> Debug.
 
@@ -49,7 +47,7 @@ G5000
 
 Load in MZT or M12 tape files
 -----------------------------
-USE EMULATOR: MZ700\_MZ700emu\mz700-PAL.exe
+USE EMULATOR: mz700-PAL.exe
 
 CMT --> Play --> select MZT or M12 file.
 
@@ -62,10 +60,6 @@ CMT --> PLAY BUTTON    (this loads a converted wav file from the MZT or M12 file
 
 Assembling ASM files:
 Depending on the engine, all source code were written with either z80 SJASMplus or z80 PASMO assemblers.
-Shiru only uses SJASMplus, whilst Utz loves Pasmo but has on occasion used SJASM.
-Shiru & Utz are the main creators of all of these engines (music players) here within.
-It is far easier to convert PASMO source to assemble under SJASM, than the other way around.
-However, personally PASMO feels to be far more flexible in opcode layout.
 
 PASMO:		pasmo --alocal %1.asm %1.bin
 
@@ -86,7 +80,7 @@ z88dk-appmake.exe +mz --org 20480 -b music.bin -o music.mzt
 Assembly details
 ===================
 
-Typical origin : $5000
+Typical origin : $1200 or $5000
 
 Needs at the start to initialise sound:
 
