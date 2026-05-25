@@ -14,9 +14,9 @@ executable :
 
 	     MZ700-NTSC.EXE
 
-A number of emus that wont work are listed here : https://sharpmz.zdechov.net/?wiki/emulators
+Unfortunately a number of emus that are listed here do not appear to work : https://sharpmz.zdechov.net/?wiki/emulators
 
-One of the newer emulators is here, which my work (untested).  https://sourceforge.net/projects/mz800emu/
+One of the newer emulators is here, which may work (untested).  https://sourceforge.net/projects/mz800emu/
 
 
 
