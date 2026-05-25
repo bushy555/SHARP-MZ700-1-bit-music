@@ -9,7 +9,8 @@
 A number of older Sharp MZ700 emulators refuse to work with 1-bit sound.
 I found this particular version " EmuZ-80B-1500-2200-2500_beta5b.zip " from some unknown obscure location, and it works brilliantly on all engines, and runs under Win 7 x32, Win 10 and Win 11.
 executable :
-		MZ700-PAL.EXE
+
+		 MZ700-PAL.EXE
 
 	     MZ700-NTSC.EXE
 
