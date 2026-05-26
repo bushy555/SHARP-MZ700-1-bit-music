@@ -85,29 +85,31 @@ Typical origin : $1200 or $5000
 
 Needs at the start to initialise sound:
 
-begin:		out 	($E0), a
+	begin:		out 	($E0), a
 
-out	($E3), a
+	out	($E3), a
 
-ld 	hl, $E008 	;sound on
+	ld 	hl, $E008 	;sound on
 
-ld 	(hl), $01
-
-
-
-
-and replace	OUT  ($FE), A		; ZX SPECTRUM
-
-with the following three lines. This is indeed a 'cowboy-tuned' approach! Tuning will be out! Different engines will react differently - some you will not even notice the different, whilst others will have a sharp spike in hiss, noise and slow-down on the overall tempo of the music being played.  Total t-cycles will be out by an additional 16 t-cycles per each OUT($FE) replacement.  To be deadset accurate, removal or addition of various different timed opcodes need to be added/removed to get 110% accurate timing. 
-
-and 	$08		; SHARP MZ700
-
-or  	$20		; SHARP MZ700
-
-ld  	($e007), a	; SHARP MZ700
+	ld 	(hl), $01
 
 
 
+
+and replace	:
+
+	OUT  ($FE), A		; ZX SPECTRUM
+
+with the following three lines.
+
+	and 	$08		; SHARP MZ700
+
+	or  	$20		; SHARP MZ700
+
+ 	ld  	($e007), a	; SHARP MZ700
+
+
+This is indeed a 'cowboy-tuned' approach! Tuning will be out! Different engines will react differently - some you will not even notice the different, whilst others will have a sharp spike in hiss, noise and slow-down on the overall tempo of the music being played.  Total t-cycles will be out by an additional 16 t-cycles per each OUT($FE) replacement.  To be deadset accurate, removal or addition of various different timed opcodes need to be added/removed to get 110% accurate timing. 
 
 
 .MZT/.M12 File Header:
