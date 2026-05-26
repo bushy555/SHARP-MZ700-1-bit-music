@@ -84,16 +84,12 @@ Assembly details
 Typical origin : $1200 or $5000
 
 Needs at the start to initialise sound:
-
-	begin:		out 	($E0), a
-
+	ORG $5000
+	begin:		
+	out 	($E0), a
 	out	($E3), a
-
 	ld 	hl, $E008 	;sound on
-
 	ld 	(hl), $01
-
-
 
 
 and replace	:
@@ -103,9 +99,7 @@ and replace	:
 with the following three lines.
 
 	and 	$08		; SHARP MZ700
-
 	or  	$20		; SHARP MZ700
-
  	ld  	($e007), a	; SHARP MZ700
 
 
