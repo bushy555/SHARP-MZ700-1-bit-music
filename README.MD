@@ -98,7 +98,7 @@ ld 	(hl), $01
 
 and replace	OUT  ($FE), A		; ZX SPECTRUM
 
-with:
+with the following three lines. This is indeed a 'cowboy-tuned' approach! Tuning will be out! Different engines will react differently - some you will not even notice the different, whilst others will have a sharp spike in hiss, noise and slow-down on the overall tempo of the music being played.  Total t-cycles will be out by an additional 16 t-cycles per each OUT($FE) replacement.  To be deadset accurate, removal or addition of various different timed opcodes need to be added/removed to get 110% accurate timing. 
 
 and 	$08		; SHARP MZ700
 
